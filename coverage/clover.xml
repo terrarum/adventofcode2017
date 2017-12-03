@@ -1,41 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1512300742887" clover="3.2.0">
-  <project timestamp="1512300742887" name="All files">
-    <metrics statements="31" coveredstatements="31" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6" elements="45" coveredelements="45" complexity="0" loc="31" ncloc="31" packages="1" files="1" classes="1">
-      <file name="index.js" path="/Users/terrarum/Development/adventofcode2017/src/day1/index.js">
+<coverage generated="1512313222289" clover="3.2.0">
+  <project timestamp="1512313222289" name="All files">
+    <metrics statements="67" coveredstatements="65" conditionals="12" coveredconditionals="10" methods="18" coveredmethods="18" elements="97" coveredelements="93" complexity="0" loc="67" ncloc="67" packages="2" files="2" classes="2">
+      <package name="day1">
         <metrics statements="31" coveredstatements="31" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="20" type="stmt"/>
-        <line num="3" count="20" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="6" count="20" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="28" type="stmt"/>
-        <line num="11" count="28" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="14" type="stmt"/>
-        <line num="14" count="28" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="23" count="20" type="stmt"/>
-        <line num="24" count="20" type="stmt"/>
-        <line num="26" count="20" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="7" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="5" type="stmt"/>
-        <line num="36" count="5" type="stmt"/>
-        <line num="37" count="5" type="stmt"/>
-        <line num="39" count="5" type="stmt"/>
-        <line num="40" count="28" type="stmt"/>
-        <line num="41" count="28" type="stmt"/>
-        <line num="42" count="28" type="cond" truecount="2" falsecount="0"/>
-        <line num="43" count="16" type="stmt"/>
-        <line num="47" count="5" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-      </file>
+        <file name="index.js" path="/Users/terrarum/Development/adventofcode2017/src/day1/index.js">
+          <metrics statements="31" coveredstatements="31" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="20" type="stmt"/>
+          <line num="3" count="20" type="cond" truecount="2" falsecount="0"/>
+          <line num="4" count="4" type="stmt"/>
+          <line num="6" count="20" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="28" type="stmt"/>
+          <line num="11" count="28" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="14" type="stmt"/>
+          <line num="14" count="28" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="4" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
+          <line num="22" count="4" type="stmt"/>
+          <line num="23" count="20" type="stmt"/>
+          <line num="24" count="20" type="stmt"/>
+          <line num="26" count="20" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="7" type="stmt"/>
+          <line num="31" count="4" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="5" type="stmt"/>
+          <line num="36" count="5" type="stmt"/>
+          <line num="37" count="5" type="stmt"/>
+          <line num="39" count="5" type="stmt"/>
+          <line num="40" count="28" type="stmt"/>
+          <line num="41" count="28" type="stmt"/>
+          <line num="42" count="28" type="cond" truecount="2" falsecount="0"/>
+          <line num="43" count="16" type="stmt"/>
+          <line num="47" count="5" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="day2">
+        <metrics statements="36" coveredstatements="34" conditionals="4" coveredconditionals="2" methods="12" coveredmethods="12"/>
+        <file name="index.js" path="/Users/terrarum/Development/adventofcode2017/src/day2/index.js">
+          <metrics statements="36" coveredstatements="34" conditionals="4" coveredconditionals="2" methods="12" coveredmethods="12"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="13" count="6" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="23" count="3" type="stmt"/>
+          <line num="24" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="28" count="3" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+          <line num="33" count="3" type="stmt"/>
+          <line num="34" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="47" count="3" type="stmt"/>
+          <line num="48" count="3" type="stmt"/>
+          <line num="50" count="3" type="stmt"/>
+          <line num="51" count="3" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
+        </file>
+      </package>
     </metrics>
   </project>
 </coverage>
