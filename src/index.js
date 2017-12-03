@@ -24,3 +24,4 @@ const day2input = `6046	6349	208	276	4643	1085	1539	4986	7006	5374	252	4751	226	
 3021	3407	218	1043	449	214	1594	3244	3097	286	114	223	1214	3102	257	3345`;
 
 console.log(`Day Two Task One: ${day2.taskOne(day2input)}`);
+console.log(`Day Two Task Two: ${day2.taskTwo(day2input)}`);

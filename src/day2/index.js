@@ -42,13 +42,54 @@ const getLowestValue = function getLowestValue(row) {
 const calculateRowDifference = function calculateRowDifference(spreadsheet) {
   let checksum = 0;
 
-  // For each row
+  // For each row.
   spreadsheet.forEach((row) => {
+    // Get the highest cell value.
     const highestValue = getHighestValue(row);
+
+    // Get the lowest cell value.
     const lowestValue = getLowestValue(row);
 
+    // Get the difference.
     const difference = highestValue - lowestValue;
+
+    // Add to the checksum.
     checksum += difference;
+  });
+
+  return checksum;
+};
+
+const findDivisible = function findDivisible(row) {
+  let result = null;
+  // For each item in the row, divide it by the other items.
+  row.forEach((dividend) => {
+    row.forEach((divisor) => {
+      if (dividend === divisor) return;
+      if (divisor > dividend) return;
+
+      const division = dividend / divisor;
+
+      // If any result is a whole number, stop and return that.
+      if (Number.isInteger(division)) {
+        result += division;
+      }
+    });
+  });
+
+  return result;
+};
+
+const calculateRowDivisible = function calculateRowDivisible(spreadsheet) {
+  let checksum = 0;
+
+  // For each row.
+  spreadsheet.forEach((row) => {
+    // Divide each number by every other number.
+    // If the result is a whole number, add the result to the checksum.
+    const result = findDivisible(row);
+
+    checksum += result;
   });
 
   return checksum;
@@ -63,6 +104,9 @@ const taskOne = function taskOne(input) {
 
 const taskTwo = function taskTwo(input) {
   const spreadsheet = processArray(input);
+  const checksum = calculateRowDivisible(spreadsheet);
+
+  return checksum;
 };
 
 module.exports = {
