@@ -1,0 +1,22 @@
+{
+  "name": "adventofcode2017",
+  "version": "1.0.0",
+  "description": "My Advent of Code 2017 solutions",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --watchAll --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/terrarum/adventofcode2017.git"
+  },
+  "author": "James Fidler <terrarum@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terrarum/adventofcode2017/issues"
+  },
+  "homepage": "https://github.com/terrarum/adventofcode2017#readme"
+}
