@@ -62,10 +62,15 @@ const getCellPos = function getCellPos(cellId) {
   return currentCell;
 };
 
+const calculateManhatten = function calculateManhatten(pos) {
+  return Math.abs(pos.x) + Math.abs(pos.y);
+};
+
 const taskOne = function taskOne(cellId) {
   const cellPos = getCellPos(cellId);
-  console.log(cellPos);
-  return 0;
+  const manhatten = calculateManhatten(cellPos);
+
+  return manhatten;
 };
 
 const taskTwo = function taskTwo(input) {
