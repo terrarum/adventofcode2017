@@ -8,5 +8,9 @@ test('Task One', () => {
 });
 
 test('Task Two', () => {
-
+  expect(day3.taskTwo(1)).toBe(1);
+  expect(day3.taskOne(2)).toBe(1);
+  expect(day3.taskOne(3)).toBe(2);
+  expect(day3.taskOne(4)).toBe(4);
+  expect(day3.taskOne(5)).toBe(5);
 });

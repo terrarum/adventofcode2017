@@ -74,7 +74,7 @@ const taskOne = function taskOne(cellId) {
 };
 
 const taskTwo = function taskTwo(input) {
-
+  const cellPos = getCellPos(cellId);
 };
 
 module.exports = {
