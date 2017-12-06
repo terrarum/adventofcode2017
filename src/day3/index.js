@@ -38,7 +38,6 @@ const getCellPos = function getCellPos(cellId) {
 
   // Loop through each cell id.
   for (let cell = 1; cell < cellId; cell++) {
-
     // Identify the last cell of the leg.
     if (cell === legEnd) {
       // Update the current leg.
@@ -59,11 +58,14 @@ const getCellPos = function getCellPos(cellId) {
       return currentCell;
     }
   }
+
+  return currentCell;
 };
 
 const taskOne = function taskOne(cellId) {
   const cellPos = getCellPos(cellId);
   console.log(cellPos);
+  return 0;
 };
 
 const taskTwo = function taskTwo(input) {
@@ -74,6 +76,3 @@ module.exports = {
   taskOne,
   taskTwo,
 };
-
-taskOne(12);
-taskOne(23);
