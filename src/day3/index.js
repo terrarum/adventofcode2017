@@ -65,7 +65,7 @@ const getCellPos = function getCellPos(cellId) {
 
     currentCell.x += vector.x;
     currentCell.y += vector.y;
-    // console.log(`cellId: ${cellId}\tx: ${currentCell.x}\ty: ${currentCell.y}\tleg: ${leg}\tlegLength: ${legLength}\tdist: ${calculateManhatten(currentCell)}`);
+    console.log(`cellId: ${cellId}\tx: ${currentCell.x}\ty: ${currentCell.y}\tleg: ${leg}\tlegLength: ${legLength}\tdist: ${calculateManhatten(currentCell)}`);
   }
 
   return currentCell;
@@ -84,6 +84,8 @@ const taskOne = function taskOne(cellId) {
 
 const taskTwo = function taskTwo(cellId) {
   const cellPos = getCellPos(cellId);
+
+  return 1;
 };
 
 module.exports = {
