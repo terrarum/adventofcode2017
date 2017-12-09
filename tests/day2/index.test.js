@@ -8,10 +8,10 @@ const taskTwoInput = `5 9 2 8
 9 4 7 3
 3 8 6 5`;
 
-test('Task One', () => {
+test('Day Two Task One', () => {
   expect(day2.taskOne(taskOneInput)).toBe(18);
 });
 
-test('Task Two', () => {
+test('Day Two Task Two', () => {
   expect(day2.taskTwo(taskTwoInput)).toBe(9);
 });

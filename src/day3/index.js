@@ -68,8 +68,6 @@ const getCellPos = function getCellPos(cellId) {
     // console.log(`cellId: ${cellId}\tx: ${currentCell.x}\ty: ${currentCell.y}\tleg: ${leg}\tlegLength: ${legLength}\tdist: ${calculateManhatten(currentCell)}`);
   }
 
-
-
   return currentCell;
 };
 
@@ -92,13 +90,3 @@ module.exports = {
   taskOne,
   taskTwo,
 };
-
-// taskOne(1);
-// taskOne(2);
-// taskOne(3);
-// taskTwo(1);
-// taskTwo(2);
-// taskTwo(3);
-// taskTwo(4);
-// taskTwo(10);
-// taskTwo(21);
