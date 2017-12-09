@@ -6,19 +6,36 @@ const isEven = function isEven(num) {
   return !isOdd(num);
 };
 
+const pad = function pad(num) {
+  return num < 10 ? `0${num}` : num;
+};
+
 const getVector = function getVector(leg, legLength) {
   if (isEven(leg) && isOdd(legLength)) {
-    return { x: 0, y: 1}
+    return { x: 1, y: 0}
   }
   if (isOdd(leg) && isEven(legLength)) {
     return { x: -1, y: 0}
   }
   if (isOdd(leg) && isOdd(legLength)) {
-    return { x: 1, y: 0}
+    return { x: 0, y: 1}
   }
   if (isEven(leg) && isEven(legLength)) {
     return { x: 0, y: -1}
   }
+};
+
+const expected = {
+  1: 1,
+  2: 1,
+  3: 2,
+  4: 4,
+  5: 5,
+  6: 10,
+  7: 11,
+  8: 23,
+  9: 25,
+  10: 26,
 };
 
 const getCellPos = function getCellPos(cellId) {
@@ -32,32 +49,26 @@ const getCellPos = function getCellPos(cellId) {
   };
 
   let vector = {
-    x: 1,
+    x: 0,
     y: 0,
   };
 
-  // Loop through each cell id.
-  for (let cell = 1; cell < cellId; cell++) {
-    // Identify the last cell of the leg.
+  for (let cell = 1; cell < cellId + 1; cell++) {
     if (cell === legEnd) {
-      // Update the current leg.
       leg += 1;
-      // Update the length of the current leg if this is an odd leg.
       if (isOdd(leg)) {
         legLength = (leg + 1) / 2;
       }
-      // Set the new leg end.
       legEnd = cell + legLength;
-      // Get vector.
       vector = getVector(leg, legLength);
     }
+
     currentCell.x += vector.x;
     currentCell.y += vector.y;
-
-    if (cell === cellId - 1) {
-      return currentCell;
-    }
+    // console.log(`cellId: ${cellId}\tx: ${currentCell.x}\ty: ${currentCell.y}\tleg: ${leg}\tlegLength: ${legLength}\tdist: ${calculateManhatten(currentCell)}`);
   }
+
+
 
   return currentCell;
 };
@@ -73,7 +84,7 @@ const taskOne = function taskOne(cellId) {
   return manhatten;
 };
 
-const taskTwo = function taskTwo(input) {
+const taskTwo = function taskTwo(cellId) {
   const cellPos = getCellPos(cellId);
 };
 
@@ -81,3 +92,13 @@ module.exports = {
   taskOne,
   taskTwo,
 };
+
+// taskOne(1);
+// taskOne(2);
+// taskOne(3);
+// taskTwo(1);
+// taskTwo(2);
+// taskTwo(3);
+// taskTwo(4);
+// taskTwo(10);
+// taskTwo(21);
