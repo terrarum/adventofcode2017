@@ -65,21 +65,21 @@ const getCellPos = function getCellPos(cellId) {
 
     currentCell.x += vector.x;
     currentCell.y += vector.y;
-    console.log(`cellId: ${cellId}\tx: ${currentCell.x}\ty: ${currentCell.y}\tleg: ${leg}\tlegLength: ${legLength}\tdist: ${calculateManhatten(currentCell)}`);
+    console.log(`cellId: ${cellId}\tx: ${currentCell.x}\ty: ${currentCell.y}\tleg: ${leg}\tlegLength: ${legLength}\tdist: ${calculateManhattan(currentCell)}`);
   }
 
   return currentCell;
 };
 
-const calculateManhatten = function calculateManhatten(pos) {
+const calculateManhattan = function calculateManhattan(pos) {
   return Math.abs(pos.x) + Math.abs(pos.y);
 };
 
 const taskOne = function taskOne(cellId) {
   const cellPos = getCellPos(cellId);
-  const manhatten = calculateManhatten(cellPos);
+  const manhattan = calculateManhattan(cellPos);
 
-  return manhatten;
+  return manhattan;
 };
 
 const taskTwo = function taskTwo(cellId) {
