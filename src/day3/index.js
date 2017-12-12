@@ -55,7 +55,6 @@ const getCellPos = function getCellPos(cellId) {
 
     currentCell.x += vector.x;
     currentCell.y += vector.y;
-    console.log(cell, dir, vector, currentCell);
   }
 
   return currentCell;
@@ -72,17 +71,57 @@ const taskOne = function taskOne(cellId) {
   return manhattan;
 };
 
-const sumSurrounding = function sumSurrounding(pos) {
+const sumSurrounding = function sumSurrounding(cellPos, cells) {
+  let value = 0;
 
+  // Create all surrounding cells.
+  const surrounding = [];
+  surrounding.push({ x: cellPos.x - 1, y: cellPos.y});
+  surrounding.push({ x: cellPos.x - 1, y: cellPos.y - 1});
+  surrounding.push({ x: cellPos.x, y: cellPos.y - 1});
+  surrounding.push({ x: cellPos.x + 1, y: cellPos.y - 1});
+  surrounding.push({ x: cellPos.x + 1, y: cellPos.y});
+  surrounding.push({ x: cellPos.x + 1, y: cellPos.y + 1});
+  surrounding.push({ x: cellPos.x, y: cellPos.y + 1});
+  surrounding.push({ x: cellPos.x - 1, y: cellPos.y + 1});
+
+  // For each surrounding cell, get its value and add it to value.
+  surrounding.forEach((cell) => {
+    if (cells[JSON.stringify(cell)]) {
+      value += cells[JSON.stringify(cell)];
+    }
+  });
+
+  return value === 0 ? 1 : value;
+};
+
+const taskTwoCellValue = function taskTwoCellValue(cellId) {
+  const cells = {};
+
+  for (let cell = 1; cell < cellId + 1; cell++) {
+    const cellPos = getCellPos(cell);
+    const cellPosString = JSON.stringify(cellPos);
+
+    // For each cell, get all surrounding values. If one exists, add them together.
+    const value = sumSurrounding(cellPos, cells);
+
+    if (value > cellId) {
+      return value;
+    }
+
+    cells[cellPosString] = value;
+  }
 };
 
 const taskTwo = function taskTwo(cellId) {
-  const cellPos = getCellPos(cellId);
+  const pos = getCellPos(cellId);
+  const value = taskTwoCellValue(cellId);
 
-  return 1;
+  return value;
 };
 
 module.exports = {
   taskOne,
   taskTwo,
+  taskTwoCellValue,
 };
