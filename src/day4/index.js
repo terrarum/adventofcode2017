@@ -5,18 +5,25 @@ const processPassphrase = function processPassphrase(passphrase) {
 
   passArr.forEach((currentWord) => {
     passArr.forEach((word) => {
-      count += word === currentWord ? 1 : 0;
+      if (word === currentWord) {
+        count++;
+      }
     })
   });
 
-  return count === 1;
+
+  return count === passArr.length;
 };
 
-const taskOne = function taskOne(passphrase) {
-  // Split by spaces.
-
-  // For each item, see if it exists in the array more than once.
-
+const taskOne = function taskOne(passphrases) {
+  passphrasesArray = passphrases.split('\n');
+  let validPhraseCount = 0;
+  passphrasesArray.forEach((passphrase) => {
+    if (processPassphrase(passphrase)) {
+      validPhraseCount++;
+    }
+  });
+  return validPhraseCount;
 };
 
 const taskTwo = function taskOne(input) {
