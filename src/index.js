@@ -28,5 +28,5 @@ console.log(`Day Two Task One: ${day2.taskOne(day2input)}`);
 console.log(`Day Two Task Two: ${day2.taskTwo(day2input)}`);
 
 console.log(`Day Three Task One: ${day3.taskOne(265149)}`);
-console.log(`Day Three Task Two: ${day3.taskTwo(265149)}`);
+console.log(`Day Three Task Two: ${day3.taskTwo(265149, true)}`);
 

@@ -95,27 +95,30 @@ const sumSurrounding = function sumSurrounding(cellPos, cells) {
   return value === 0 ? 1 : value;
 };
 
-const taskTwoCellValue = function taskTwoCellValue(cellId) {
+const taskTwoCellValue = function taskTwoCellValue(cellId, getNext = false) {
   const cells = {};
-
+  let value = 0;
   for (let cell = 1; cell < cellId + 1; cell++) {
     const cellPos = getCellPos(cell);
     const cellPosString = JSON.stringify(cellPos);
 
     // For each cell, get all surrounding values. If one exists, add them together.
-    const value = sumSurrounding(cellPos, cells);
+    value = sumSurrounding(cellPos, cells);
 
-    if (value > cellId) {
-      return value;
+    if (getNext) {
+      if (value > cellId) {
+        return value;
+      }
     }
 
     cells[cellPosString] = value;
   }
+  return value;
 };
 
-const taskTwo = function taskTwo(cellId) {
+const taskTwo = function taskTwo(cellId, getNext) {
   const pos = getCellPos(cellId);
-  const value = taskTwoCellValue(cellId);
+  const value = taskTwoCellValue(cellId, getNext);
 
   return value;
 };
