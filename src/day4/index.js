@@ -51,7 +51,7 @@ const taskOne = function taskOne(passphrases) {
   return validPhraseCount;
 };
 
-const taskTwo = function taskOne(passphrases) {
+const taskTwo = function taskTwo(passphrases) {
   const passphrasesArray = passphrases.split('\n');
   let validPhraseCount = 0;
   passphrasesArray.forEach((passphrase) => {
