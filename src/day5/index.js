@@ -1,11 +1,12 @@
 const processInstructions = function processInstructions(instructions, steps, currentStep) {
-  console.log(instructions[currentStep]);
+
+  // TODO actually follow the logic.
+
   if (instructions[currentStep] !== undefined) {
     currentStep++;
     return processInstructions(instructions, steps, currentStep);
   }
   else {
-    console.log('a', currentStep);
     return currentStep;
   }
 };
